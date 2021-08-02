@@ -1,8 +1,10 @@
 @import 'config'
+@import 'home'
+@import 'menu'
 
 body
     background: $primaryColor
-    color: #fff
+    color: setTextColor($primaryColor)
     height: 100vh
     font-family: 'Segoe UI', 'Segoe UI', 'Segoe'
     line-height: 1
@@ -11,7 +13,7 @@ h1, h2, h3
     font-weight: 400
 
 a
-    color: #fff
+    color: setTextColor($primaryColor)
     text-decoration: none
 
 header
@@ -31,6 +33,7 @@ main
 
         a
             padding: 0.4rem
+            @include transitionEase
             &:hover
                 color: $secondaryColor
 
@@ -41,4 +44,4 @@ footer
     right: 1rem
     text-align: right
     padding: 1rem
-    color: #fff
+    color: setTextColor($primaryColor)
